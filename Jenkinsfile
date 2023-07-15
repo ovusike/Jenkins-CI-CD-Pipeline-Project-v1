@@ -77,12 +77,11 @@ pipeline {
             withSonarQubeEnv('SonarQube') {
             
             sh """
-            mvn sonar:sonar \
-          -Dsonar.projectKey=JavaWebApp \
-          -Dsonar.host.url=http://172.31.89.106:9000 \
-          -Dsonar.login=eb71cc32022d0478b157b601133934c966fd8a04
-            
-            """
+                 mvn sonar:sonar \
+              -Dsonar.projectKey=sonar \
+              -Dsonar.host.url=http://52.23.188.243:9000 \
+              -Dsonar.login=0ec26ac93e5d10066b3d947734c6bed55f76b8b5
+             """
             }
         }
         
