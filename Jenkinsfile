@@ -24,16 +24,13 @@ pipeline {
         stage('Git checkout') {
             steps {
                 echo 'Cloning the application code...'
-                git branch: 'main', url: 'https://github.com/cvamsikrishna11/Jenkins-CI-CD-Pipeline-Project.git'
-                sh 'mvn --version'
-                
+                git branch: 'main', url: 'https://github.com/cvamsikrishna11/Jenkins-CI-CD-Pipeline-Project.git'            
             }
         }
         
         
         stage('Build') {
             steps {
-                sh 'java -version'
                 sh 'mvn clean package'
                 
             }
